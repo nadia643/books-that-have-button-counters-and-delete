@@ -62,22 +62,7 @@ export default class Book extends Component {
           <button type="button" onClick={this.resetCount}>Reset count</button>
           <button type="button" onClick={() => handleDelete(id)}>Delete me</button>
           <button type="button" onClick={this.handleInfo}>Toggle Info</button>
-{checkInfo(this.state.showInfo)}
-
-{/* // {this.state.showInfo?<p>Et pariatur reprehenderit deserunt fugiat proident non 
-// fugiat excepteur deserunt veniam velit elit fugiat.</p>:null} */}
-
-
-          {/* {
-            this.state.showInfo && (
-            <p>
-              Aliqua ad incididunt dolore qui incididunt quis 
-              minim eiusmod nulla ex esse. Elit non amet laborum tempor eiusmod 
-              excepteur cillum amet. Aliqua cupidatat eu Lorem nulla culpa ea exercitation.
-              Ea officia amet voluptate aliqua et ut excepteur. Eu ipsum id excepteur 
-              incididunt laboris laboris. Aliqua nisi ex irure qui Lorem in cillum.
-            </p>
-         )} */}
+          {checkInfo(this.state.showInfo)}
         </div>  
       </article>
     );
