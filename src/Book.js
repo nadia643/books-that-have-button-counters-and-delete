@@ -28,6 +28,9 @@ export default class Book extends Component {
   };
 
   handleInfo = () => {
+    this.setState({
+      showInfo:!this.state.showInfo
+    })
 
   }
 
@@ -35,6 +38,16 @@ export default class Book extends Component {
     // console.log(this.props);
     const { id, img, title, author } = this.props.info;
     const {handleDelete} = this.props
+
+
+  const checkInfo = (info) => {
+    if(info===true) {
+      return <p>Ea officia cupidatat aliquip officia ad mollit eiusmod adipisicing amet laborum culpa.</p>
+    }
+    else {
+      return null
+    }
+  }
 
     return (
       <article className="book">
@@ -49,7 +62,13 @@ export default class Book extends Component {
           <button type="button" onClick={this.resetCount}>Reset count</button>
           <button type="button" onClick={() => handleDelete(id)}>Delete me</button>
           <button type="button" onClick={this.handleInfo}>Toggle Info</button>
-          {
+{checkInfo(this.state.showInfo)}
+
+{/* // {this.state.showInfo?<p>Et pariatur reprehenderit deserunt fugiat proident non 
+// fugiat excepteur deserunt veniam velit elit fugiat.</p>:null} */}
+
+
+          {/* {
             this.state.showInfo && (
             <p>
               Aliqua ad incididunt dolore qui incididunt quis 
@@ -58,7 +77,7 @@ export default class Book extends Component {
               Ea officia amet voluptate aliqua et ut excepteur. Eu ipsum id excepteur 
               incididunt laboris laboris. Aliqua nisi ex irure qui Lorem in cillum.
             </p>
-         )}
+         )} */}
         </div>  
       </article>
     );
